@@ -22,6 +22,7 @@ export const es = {
     comoLlegar: 'Cómo llegar',
     verTodo: 'Ver todo',
     buscar: 'Buscar',
+    cerrar: 'Cerrar',
   },
 
   home: {
@@ -55,26 +56,13 @@ export const es = {
 
   viajes: {
     pasajeros: '1 Adulto, 1 Estudiante',
-    filtros: 'Filtros',
-    limpiarTodo: 'Limpiar todo',
-    tipoBus: 'Tipo de Bus',
-    horarioSalida: 'Horario de Salida',
-    mostrando: 'Mostrando {n} viajes disponibles',
-    ordenarPor: 'Ordenar por',
-    seleccionarAsiento: 'Seleccionar Asiento',
-    descuentoEstudiantil: 'Descuento Estudiantil Aplicado',
-    sinResultados: 'No hay viajes que coincidan con los filtros seleccionados.',
-    franja: {
-      manana: 'Mañana',
-      tarde: 'Tarde',
-      noche: 'Noche',
-      trasnoche: 'Trasnoche',
-    },
-    orden: {
-      recomendado: 'Recomendado',
-      precioAsc: 'Menor precio',
-      salida: 'Hora de salida',
-    },
+    todasTitulo: 'Empresas y destinos disponibles',
+    todasSubtitulo: 'Todas las compañías que operan desde la Terminal de Almagro y sus recorridos.',
+    tramo: 'Tramo {n}',
+    reservarEn: 'Reservar en {empresa}',
+    paradasIntermedias: 'paradas intermedias',
+    sinRutas: 'No encontramos empresas para este tramo.',
+    mismoOrigenDestino: 'El origen y el destino son iguales. Elegí paradas distintas.',
   },
 
   beneficios: {
@@ -89,6 +77,29 @@ export const es = {
     ctaBody:
       'Sumate a los miles de estudiantes que viajan de forma segura y económica con la Terminal de Ómnibus Almagro.',
     ctaButton: 'Registrarse como Estudiante',
+    form: {
+      title: 'Registro de Estudiante',
+      intro:
+        'Completá tus datos y subí tu certificado de alumno regular para validar tu Abono Estudiantil.',
+      nombre: 'Nombre completo',
+      nombrePlaceholder: 'Ej. María González',
+      email: 'Correo electrónico',
+      emailPlaceholder: 'tu@email.com',
+      dni: 'DNI',
+      dniPlaceholder: 'Ej. 40123456',
+      universidad: 'Universidad o institución',
+      universidadPlaceholder: 'Ej. Universidad de Buenos Aires',
+      carrera: 'Carrera',
+      carreraPlaceholder: 'Ej. Ingeniería',
+      certificado: 'Certificado de alumno regular',
+      certificadoCta: 'Seleccionar archivo',
+      certificadoHint: 'Subí una foto o PDF de tu credencial o certificado (máx. 5 MB)',
+      enviar: 'Enviar registro',
+      successTitle: '¡Registro enviado!',
+      successBody:
+        'Recibimos tus datos. La verificación demora menos de 24 horas y te avisaremos por correo.',
+      successClose: 'Listo',
+    },
   },
 
   info: {
@@ -96,11 +107,19 @@ export const es = {
     subtitle:
       'Nuestra misión es garantizar que cada viajero disfrute de una experiencia fluida y digna. Nos comprometemos con la accesibilidad universal, eliminando barreras físicas y comunicacionales.',
     planoTitle: 'Plano de la Terminal',
+    plantaBaja: 'Planta Baja',
+    plantaAlta: 'Planta Alta',
     leyendaTitle: 'Leyenda de Servicios',
     asistenciaTitle: '¿Necesita Asistencia?',
     asistenciaBody:
       'Nuestro personal de apoyo está disponible para ayudarte con tu equipaje y movilidad.',
     asistenciaButton: 'Solicitar Ayuda Ahora',
+    modalTitle: 'Asistencia Inmediata',
+    modalDesc:
+      'Comunicate con el responsable de asistencia de turno. Está disponible ahora para coordinar tu llegada y ayudarte en la terminal.',
+    modalResponsable: 'Responsable de turno',
+    modalHorario: 'Turno',
+    modalLlamar: 'Llamar ahora',
     accesibilidadTitle: 'Información de Accesibilidad',
     ctaTitle: '¿Planificando su llegada?',
     ctaBody:

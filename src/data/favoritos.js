@@ -7,6 +7,7 @@ export const localFavorites = [
     title: 'Café Las Violetas',
     desc: 'Un imponente café histórico famoso por sus vitrales y pastelería tradicional. A un corto paseo de la estación, perfecto para un descanso temprano.',
     image: images.cafeVioletas,
+    imgClass: 'object-[center_24%]',
   },
   {
     id: 'libreria-del-parque',

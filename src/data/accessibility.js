@@ -37,3 +37,19 @@ export const accessibilityInfo = [
     ],
   },
 ]
+
+/* Turnos de asistencia: cada uno con el responsable de guardia y su teléfono.
+   Se usa para mostrar "el responsable en ese momento" en el modal de asistencia. */
+export const assistanceShifts = [
+  { nombre: 'Lucía Fernández', telefono: '+54 11 5555-1001', horario: '06:00 – 14:00' },
+  { nombre: 'Martín Gómez', telefono: '+54 11 5555-1002', horario: '14:00 – 22:00' },
+  { nombre: 'Sofía Ramírez', telefono: '+54 11 5555-1003', horario: '22:00 – 06:00' },
+]
+
+/* Devuelve el responsable de guardia según la hora actual. */
+export function getAssistanceOnDuty(date = new Date()) {
+  const h = date.getHours()
+  if (h >= 6 && h < 14) return assistanceShifts[0]
+  if (h >= 14 && h < 22) return assistanceShifts[1]
+  return assistanceShifts[2]
+}

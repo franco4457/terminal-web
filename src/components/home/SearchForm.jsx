@@ -2,9 +2,10 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { MapPin, Calendar, User, Search } from 'lucide-react'
 import { useT } from '../../i18n/LanguageContext'
+import { HUB, getParadas } from '../../data/companias'
 import Button from '../ui/Button'
 
-const cities = ['Buenos Aires', 'Córdoba', 'Rosario', 'La Plata', 'Mendoza', 'Mar del Plata']
+const paradas = getParadas()
 
 function Field({ icon: Icon, label, children }) {
   return (
@@ -23,8 +24,8 @@ const inputClass = 'w-full bg-transparent text-sm text-ink outline-none'
 export default function SearchForm() {
   const { t } = useT()
   const navigate = useNavigate()
-  const [origen, setOrigen] = useState('Buenos Aires')
-  const [destino, setDestino] = useState('Córdoba')
+  const [origen, setOrigen] = useState(HUB)
+  const [destino, setDestino] = useState('Mar del Plata')
   const [fecha, setFecha] = useState('')
   const [pax, setPax] = useState(1)
 
@@ -42,14 +43,14 @@ export default function SearchForm() {
     >
       <Field icon={MapPin} label={t('home.searchOrigen')}>
         <select value={origen} onChange={(e) => setOrigen(e.target.value)} className={inputClass}>
-          {cities.map((c) => (
+          {paradas.map((c) => (
             <option key={c}>{c}</option>
           ))}
         </select>
       </Field>
       <Field icon={MapPin} label={t('home.searchDestino')}>
         <select value={destino} onChange={(e) => setDestino(e.target.value)} className={inputClass}>
-          {cities.map((c) => (
+          {paradas.map((c) => (
             <option key={c}>{c}</option>
           ))}
         </select>

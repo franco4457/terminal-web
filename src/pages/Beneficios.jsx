@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useT } from '../i18n/LanguageContext'
 import { images } from '../data/images'
 import Container from '../components/layout/Container'
@@ -6,9 +7,11 @@ import CtaBanner from '../components/ui/CtaBanner'
 import Button from '../components/ui/Button'
 import BenefitsGrid from '../components/beneficios/BenefitsGrid'
 import FaqAccordion from '../components/beneficios/FaqAccordion'
+import StudentRegistrationModal from '../components/beneficios/StudentRegistrationModal'
 
 export default function Beneficios() {
   const { t } = useT()
+  const [registerOpen, setRegisterOpen] = useState(false)
   return (
     <Container className="py-12 space-y-16">
       {/* Hero */}
@@ -18,7 +21,9 @@ export default function Beneficios() {
             {t('beneficios.heroTitle')}
           </h1>
           <p className="mt-4 text-muted">{t('beneficios.heroBody')}</p>
-          <Button className="mt-6">{t('beneficios.registrarme')}</Button>
+          <Button className="mt-6" onClick={() => setRegisterOpen(true)}>
+            {t('beneficios.registrarme')}
+          </Button>
         </div>
         <img
           src={images.students}
@@ -41,8 +46,10 @@ export default function Beneficios() {
 
       {/* CTA */}
       <CtaBanner title={t('beneficios.ctaTitle')} body={t('beneficios.ctaBody')}>
-        <Button>{t('beneficios.ctaButton')}</Button>
+        <Button onClick={() => setRegisterOpen(true)}>{t('beneficios.ctaButton')}</Button>
       </CtaBanner>
+
+      <StudentRegistrationModal open={registerOpen} onClose={() => setRegisterOpen(false)} />
     </Container>
   )
 }

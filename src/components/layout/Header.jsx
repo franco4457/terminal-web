@@ -3,7 +3,7 @@ import { NavLink, Link } from 'react-router-dom'
 import { Bus, Menu, X } from 'lucide-react'
 import { useT } from '../../i18n/LanguageContext'
 import Container from './Container'
-import Button from '../ui/Button'
+// import Button from '../ui/Button'
 import { cn } from '../../utils/cn'
 
 const navItems = [
@@ -19,7 +19,7 @@ export default function Header() {
 
   const linkClass = ({ isActive }) =>
     cn(
-      'text-sm transition-colors hover:text-primary-700 flex w-full',
+      'text-sm transition-colors hover:text-primary-700',
       isActive ? 'font-semibold text-primary-900' : 'text-muted'
     )
 
@@ -33,7 +33,7 @@ export default function Header() {
           <span className='hidden sm:inline'>{t('brand')}</span>
         </Link>
 
-        <nav className='hidden items-center justify-between w-full lg:flex'>
+        <nav className='hidden items-center justify-between w-full lg:flex mx-4'>
           {navItems.map((item) => (
             <NavLink key={item.to} to={item.to} className={linkClass}>
               <button type='button' className='w-full h-full'>
@@ -41,9 +41,6 @@ export default function Header() {
               </button>
             </NavLink>
           ))}
-          <a href='#ayuda' className={linkClass}>
-            <button className='w-full h-full'>{t('nav.ayuda')}</button>
-          </a>
         </nav>
 
         <div className='flex items-center gap-2'>
@@ -55,9 +52,9 @@ export default function Header() {
           >
             {lang === 'es' ? 'EN' : 'ES'}
           </button>
-          <Button size='sm' className='hidden sm:inline-flex'>
+          {/* <Button size='sm' className='hidden sm:inline-flex'>
             {t('nav.iniciarSesion')}
-          </Button>
+          </Button> */}
           <button
             type='button'
             className='grid h-9 w-9 place-items-center rounded-md text-primary-900 lg:hidden'
@@ -88,16 +85,9 @@ export default function Header() {
                 {t(item.key)}
               </NavLink>
             ))}
-            <a
-              href='#ayuda'
-              onClick={() => setOpen(false)}
-              className='px-2 py-2 text-sm text-muted'
-            >
-              {t('nav.ayuda')}
-            </a>
-            <Button size='sm' className='mt-2 self-start sm:hidden'>
+            {/* <Button size='sm' className='mt-2 self-start sm:hidden'>
               {t('nav.iniciarSesion')}
-            </Button>
+            </Button> */}
           </Container>
         </nav>
       )}
