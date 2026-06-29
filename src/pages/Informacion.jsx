@@ -11,12 +11,12 @@ import AccessibilityInfo from '../components/informacion/AccessibilityInfo'
 export default function Informacion() {
   const { t } = useT()
   return (
-    <Container className="py-12 space-y-16">
+    <Container className='py-12 space-y-16'>
       <SectionHeading title={t('info.title')} subtitle={t('info.subtitle')} centered />
 
       <section>
         <SectionHeading title={t('info.planoTitle')} />
-        <div className="grid gap-6 lg:grid-cols-[1.5fr_1fr]">
+        <div className='grid gap-6 lg:grid-cols-[1.5fr_1fr]'>
           <TerminalMap />
           <ServicesLegend />
         </div>
@@ -26,8 +26,8 @@ export default function Informacion() {
       <AccessibilityInfo />
 
       <CtaBanner title={t('info.ctaTitle')} body={t('info.ctaBody')}>
-        <Button>{t('info.ctaPrimary')}</Button>
-        <Button variant="outline" to="/guia-almagro">
+        {/* <Button>{t('info.ctaPrimary')}</Button> */}
+        <Button variant='outline' to='/guia-almagro'>
           {t('info.ctaSecondary')}
         </Button>
       </CtaBanner>
