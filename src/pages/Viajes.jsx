@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { ArrowRight, CalendarDays, Users } from 'lucide-react'
 import { useT } from '../i18n/LanguageContext'
-import { companias } from '../data/companias'
+import { HUB, companias } from '../data/companias'
 import { buscarRutas } from '../utils/rutas'
 import Container from '../components/layout/Container'
 import Itinerario from '../components/viajes/Itinerario'
@@ -14,6 +14,7 @@ export default function Viajes() {
   const origen = params.get('origen')
   const destino = params.get('destino')
   const fecha = params.get('fecha')
+  const pax = params.get('pax')
   const hasSearch = Boolean(origen && destino)
 
   const resultado = useMemo(
@@ -41,7 +42,13 @@ export default function Viajes() {
         </header>
         <div className="space-y-4">
           {companias.map((empresa) => (
-            <RutaEmpresaCard key={empresa.id} empresa={empresa} segmento={empresa.paradas} />
+            <RutaEmpresaCard
+              key={empresa.id}
+              empresa={empresa}
+              segmento={empresa.paradas}
+              desde={HUB}
+              hasta={empresa.paradas[empresa.paradas.length - 1].nombre}
+            />
           ))}
         </div>
       </Container>
@@ -66,7 +73,7 @@ export default function Viajes() {
         </div>
       </header>
 
-      <Itinerario resultado={resultado} />
+      <Itinerario resultado={resultado} fecha={fecha} pasajeros={pax} />
     </Container>
   )
 }

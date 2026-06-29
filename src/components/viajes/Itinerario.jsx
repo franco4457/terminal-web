@@ -4,7 +4,7 @@ import RutaEmpresaCard from './RutaEmpresaCard'
 
 /* Renderiza el resultado de buscarRutas: un encabezado por cada tramo y las
    empresas que lo cubren. El modelo siempre pasa por la Terminal de Almagro. */
-export default function Itinerario({ resultado }) {
+export default function Itinerario({ resultado, fecha, pasajeros }) {
   const { t } = useT()
   const { error, tramos } = resultado
 
@@ -38,7 +38,15 @@ export default function Itinerario({ resultado }) {
           ) : (
             <div className="space-y-4">
               {tramo.opciones.map(({ empresa, segmento }) => (
-                <RutaEmpresaCard key={empresa.id} empresa={empresa} segmento={segmento} />
+                <RutaEmpresaCard
+                  key={empresa.id}
+                  empresa={empresa}
+                  segmento={segmento}
+                  desde={tramo.desde}
+                  hasta={tramo.hasta}
+                  fecha={fecha}
+                  pasajeros={pasajeros}
+                />
               ))}
             </div>
           )}

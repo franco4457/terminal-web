@@ -62,7 +62,8 @@ export const companias = [
   {
     id: 'pulqui',
     nombre: 'Pulqui',
-    url: 'https://franco4457.github.io/uni-web-proyecto-2/reserva/',
+    url: 'https://franco4457.github.io/uni-web-proyecto-2/reserva.html',
+    // url: 'http://127.0.0.1:5500/reserva.html',
     paradas: [
       { nombre: 'Parque Rivadavia', nota: 'Punto de partida' },
       { nombre: 'Rosario', nota: 'Intermedia' },
