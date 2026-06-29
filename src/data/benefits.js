@@ -11,7 +11,7 @@ export const studentBenefits = [
     icon: 'familia',
     title: 'Beneficios para Grupo Familiar',
     desc: '¿Viajás con tus padres? Vinculá tu cuenta familiar y un 10% de descuento se traslada a los familiares que viajen con vos.',
-    featured: true
+    featured: false
   },
   {
     icon: 'reserva',
