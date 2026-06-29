@@ -10,6 +10,7 @@ export const companias = [
     id: 'transbsas',
     nombre: 'TransBsAs',
     url: 'https://danteuade.github.io/Proyecto_Indivdual2/Index.html',
+    sendSearchParams: false,
     paradas: [
       { nombre: 'Parque Rivadavia', nota: 'Av. Rivadavia y Acoyte (Origen CABA)' },
       { nombre: 'Agronomía', nota: 'Av. San Martín y Pampa (Parada Secundaria)' },
@@ -26,6 +27,7 @@ export const companias = [
     id: 'rutatlantica',
     nombre: 'Rutatlántica',
     url: 'https://carandia.github.io/Proyecto_micro/',
+    sendSearchParams: false,
     paradas: [
       { nombre: 'Almagro Terminal', nota: 'Punto de partida' },
       { nombre: 'San Clemente del Tuyú', nota: 'Intermedia' },
@@ -42,6 +44,7 @@ export const companias = [
     id: 'plusmar',
     nombre: 'Plusmar',
     url: 'https://jonathandylanverones.github.io/JonaDydWeb/paradas.html',
+    sendSearchParams: false,
     paradas: [
       { nombre: 'Terminal Almagro', nota: 'Punto de partida' },
       { nombre: 'Terminal Tres Arroyos', nota: 'Destino final' }
@@ -51,6 +54,7 @@ export const companias = [
     id: 'expreso-suroeste',
     nombre: 'Expreso Suroeste',
     url: 'https://paula-brusati.github.io/Proyecto2/#horarios',
+    sendSearchParams: false,
     paradas: [
       { nombre: 'Terminal Almagro', nota: 'Parque Rivadavia - CABA' },
       { nombre: 'Parada Ezeiza', nota: 'Centro de Trasbordo' },
@@ -64,6 +68,7 @@ export const companias = [
     nombre: 'Pulqui',
     url: 'https://franco4457.github.io/uni-web-proyecto-2/reserva.html',
     // url: 'http://127.0.0.1:5500/reserva.html',
+    sendSearchParams: true,
     paradas: [
       { nombre: 'Parque Rivadavia', nota: 'Punto de partida' },
       { nombre: 'Rosario', nota: 'Intermedia' },
