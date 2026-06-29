@@ -50,7 +50,7 @@ export const companias = [
   {
     id: 'expreso-suroeste',
     nombre: 'Expreso Suroeste',
-    url: 'https://paula-brusati.github.io/Proyecto2/',
+    url: 'https://paula-brusati.github.io/Proyecto2/#horarios',
     paradas: [
       { nombre: 'Terminal Almagro', nota: 'Parque Rivadavia - CABA' },
       { nombre: 'Parada Ezeiza', nota: 'Centro de Trasbordo' },
